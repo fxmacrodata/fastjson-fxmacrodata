@@ -1,0 +1,20 @@
+# Native capability coverage
+
+Every JSON response can be supplied without a static operation/parameter selector. Customers fetch their intended windows/pages using their own current SDK/client and access entitlement.
+
+| FXMacroData capability | Target platform surface | Auth model | Implemented files | Tests | Status / reason |
+| --- | --- | --- | --- | --- | --- |
+| Discovery/catalogue | Complete native JSON values and RFC 6901 subtree views | Customer client outside adapter | json.go | Generic full-response fixtures, original bytes and all nested fields retained | native JSON consumption; live transport/auth untested |
+| Macro history and revisions/as-of | Complete native JSON values and RFC 6901 subtree views | Customer client outside adapter | json.go | Generic full-response fixtures, original bytes and all nested fields retained | native JSON consumption; live transport/auth untested |
+| Release calendar and elections | Complete native JSON values and RFC 6901 subtree views | Customer client outside adapter | json.go | Generic full-response fixtures, original bytes and all nested fields retained | native JSON consumption; live transport/auth untested |
+| Predictions/forecasts | Complete native JSON values and RFC 6901 subtree views | Customer client outside adapter | json.go | Generic full-response fixtures, original bytes and all nested fields retained | native JSON consumption; live transport/auth untested |
+| Macro and central-bank news | Complete native JSON values and RFC 6901 subtree views | Customer client outside adapter | json.go | Generic full-response fixtures, original bytes and all nested fields retained | native JSON consumption; live transport/auth untested |
+| FX history and market sessions | Complete native JSON values and RFC 6901 subtree views | Customer client outside adapter | json.go | Generic full-response fixtures, original bytes and all nested fields retained | native JSON consumption; live transport/auth untested |
+| COT positioning | Complete native JSON values and RFC 6901 subtree views | Customer client outside adapter | json.go | Generic full-response fixtures, original bytes and all nested fields retained | native JSON consumption; live transport/auth untested |
+| Commodities/financial prices | Complete native JSON values and RFC 6901 subtree views | Customer client outside adapter | json.go | Generic full-response fixtures, original bytes and all nested fields retained | native JSON consumption; live transport/auth untested |
+| Rates and curves | Complete native JSON values and RFC 6901 subtree views | Customer client outside adapter | json.go | Generic full-response fixtures, original bytes and all nested fields retained | native JSON consumption; live transport/auth untested |
+| Seasonality | Complete native JSON values and RFC 6901 subtree views | Customer client outside adapter | json.go | Generic full-response fixtures, original bytes and all nested fields retained | native JSON consumption; live transport/auth untested |
+| Research/reference | Complete native JSON values and RFC 6901 subtree views | Customer client outside adapter | json.go | Generic full-response fixtures, original bytes and all nested fields retained | native JSON consumption; live transport/auth untested |
+| Non-JSON media, streaming and MCP execution | JSON metadata/references remain available | Customer client/renderer | json.go | JSON shape fixtures | not supported by target platform: a JSON value library has no media renderer, transport or tool-execution engine |
+
+Original complete responses and native mutable copies remain separate. Native numbers retain lexical text until the caller explicitly converts them. Unknown fields, revisions, source/period/publication/availability clocks, status/error objects and pagination metadata are not projected away. No request, parameter, entitlement, date or source semantics are inferred. The generic adapter does not claim every endpoint/parameter, live authentication, automatic pagination, customer installation or upstream endorsement from these fixtures.
